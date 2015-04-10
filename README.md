@@ -1,4 +1,4 @@
-# Webcam Gesture Maos
+# Webcam Gesture Maps
 A map that has a (basic!) ability to respond to hand gestures in front of a webcam
 
 
