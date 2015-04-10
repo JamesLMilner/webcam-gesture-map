@@ -20,6 +20,10 @@ Find a bug or want to request a new feature? Please let us know by submitting an
 
 Anyone and everyone is welcome to contribute. Please see our guidelines for contributing.
 
+#Credits
+
+Based on a repo by [William Wu](https://www.chromeexperiments.com/experiment/gesture-based-revealjs)
+
 #Licensing
 
 MIT licensed
