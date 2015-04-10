@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1,user-scalable=no"/>
+    <title>Webcam Gesture Map</title>
+    <link rel="stylesheet" href="https://js.arcgis.com/3.13/esri/css/esri.css">
+    <link rel="stylesheet" href="css/gestures.css">
+  </head>
+
+  <body>
+    <div id="holder">
+		<canvas id="comp"></canvas>
+		<video id="video" autoplay></video>
+		<canvas id="canvas" style="display:none;"></canvas>
+    </div>
+    <div id="map"></div>
+	<div id="instructions">
+		<p></p>
+		<li><b>A flick of the hand in mid-air moves pans left or right respectively.</b></li>
+		<li><b>A two hand flick up or down pans up or down respectively</b></li>
+		<li>The detection algorithm can determine the amount and position of motion. It will only pan if your amount of motion exceeds a threshold.</li>
+		<li>Try to keep the rest of your body still.</li>
+		<li>Your hand should preferably come within two to three feet away from the camera.</li>
+		<li>Gestures should be performed with open palms facing the camera.</li>
+		<li>The algorithm is roughly 80% accurate but mileage may vary!</li>
+		<li> Credits: Based on the work of <a href="https://plus.google.com/110697457731036337756/posts">William Wu</a>.</li>
+	</div>
+      
+    <script src="http://js.arcgis.com/3.13/"></script>
+    <script src="js/gestures.js"></script>
+    <script>
+        
+      var map;
+      require(["esri/map", "dojo/domReady!"], function(Map) {
+        map = new Map("map", {
+          basemap: "dark-gray",
+          center: [ -0.808974, 51.813369], // longitude, latitude
+          zoom: 13
+        });
+      });
+
+    </script>
+  </body>
+
+</html>
